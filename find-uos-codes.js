@@ -240,8 +240,8 @@ async function findUosCode(state) {
       const courseFields = await t.any(
         `
            SELECT v.field_content
-             FROM varfield AS v
-                  JOIN record_metadata AS md ON md.id = v.record_id
+             FROM sierra_view.varfield AS v
+                  JOIN sierra_view.record_metadata AS md ON md.id = v.record_id
             WHERE v.varfield_type_code = 'r'
                   AND md.record_type_code = 'r'
                   AND md.record_num = $1
