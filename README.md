@@ -8,6 +8,7 @@ A collection of tools for working with Sierra course records.
 ```
 git clone https://github.com/SydneyUniLibrary/course-record-tools.git
 cd course-record-tools
+git checkout v1
 npm install
 ```
 
