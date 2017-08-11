@@ -154,6 +154,20 @@ const resultColumn = _.max([ options['result-column'] - 1, -1 ])
 const wantsPrependedResults = resultColumn === -1
 
 
+
+loadInputFile()
+.then(augmentInputDataWithRecordNumbers)
+.then(findUosCode)
+.then(augmentInputDataWithResults)
+.then(wantsPrependedResults ? outputInNewColumn : outputInExistingColumn)
+.then(() => process.exit(0))
+.catch(err => {
+  console.error(err)
+  process.exit(1)
+})
+
+
+
 function loadInputFile() {
   return new Promise((resolve, reject) => {
     try
@@ -348,16 +362,3 @@ function dumpState(state) {
     }
   })
 }
-
-
-
-loadInputFile()
-.then(augmentInputDataWithRecordNumbers)
-.then(findUosCode)
-.then(augmentInputDataWithResults)
-.then(wantsPrependedResults ? outputInNewColumn : outputInExistingColumn)
-.then(() => process.exit(0))
-.catch(err => {
-  console.error(err)
-  process.exit(1)
-})
