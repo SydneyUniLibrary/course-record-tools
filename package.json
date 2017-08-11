@@ -1,7 +1,7 @@
 {
-  "name": "course-record-tools",
+  "name": "@sydneyunilibrary/course-record-tools",
   "version": "1.0.0",
-  "description": "Collection of tools for working with Sierra course records",
+  "description": "A collection of tools for working with Sierra course records.",
   "license": "GPL-3.0",
   "engines": {
     "node": ">=8.0.0"
