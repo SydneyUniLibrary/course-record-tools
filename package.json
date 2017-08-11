@@ -2,6 +2,7 @@
   "name": "@sydneyunilibrary/course-record-tools",
   "version": "1.0.0",
   "description": "A collection of tools for working with Sierra course records.",
+  "repository": "SydneyUniLibrary/course-record-tools",
   "license": "GPL-3.0",
   "engines": {
     "node": ">=8.0.0"
